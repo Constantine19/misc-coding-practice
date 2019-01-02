@@ -4,6 +4,6 @@ def reverse_1(my_str):
 def reverse_2(my_str):
     return ''.join(reversed(my_str))
 
-my_str = 'Netskope'
+my_str = 'Konstantin'
 print reverse_1(my_str)
 print reverse_2(my_str)
