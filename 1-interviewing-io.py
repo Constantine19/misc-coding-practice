@@ -41,8 +41,8 @@ def two_sum_nlogn(num_list, target):
             return -1
 
 
-num_list = [-234, 43, 545, 2, 5, 345, 7]
-target = 12
+num_list = [0, 0, 3, 4]
+target = 0
 
 
 print two_sum_n(num_list, target)

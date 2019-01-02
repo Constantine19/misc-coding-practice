@@ -1,11 +1,11 @@
 # coding=utf-8
 """
 Problem description: 
-Given the api names and their respective start/end times, calculate
-the average latency for each api.
+Given the api names and their respective start/end times,
+calculate the average latency for each api.
 
 ┌─[~/Desktop/leetcode]
-└──╼ cat test_file
+└──╼ cat google-cloud-test_file
 get_foo start  2222222100
 get_foo end    2222222150
 get_foo start  2222222220
@@ -13,7 +13,7 @@ get_bar start  2222222200
 get_bar end    2222222230
 get_foo end    2222222250
 ┌─[~/Desktop/leetcode]
-└──╼ cat test_file | python gg.py 
+└──╼ cat google-cloud-test_file | python gg.py
 get_bar: average = 30
 get_foo: average = 40
 
@@ -44,8 +44,10 @@ My Solution:
 2.  For each api, sum up all the start/end times, subtract end - start,
     and finally divide by the length of the list with times.
 
-get_foo: average = 40
-get_bar: average = 30
+Expected output:
+
+    get_foo: average = 40
+    get_bar: average = 30
 
 """
 
@@ -65,14 +67,12 @@ def calculate_avg_latency(log):
 
     for key in data:
         avg = (sum(data[key]['end']) - sum(data[key]['start'])) / len(data[key]['start'])
-
         print "{}: average = {}".format(key, avg)
 
 
 def main():
-    with open('test_file') as f:
+    with open('google-cloud-test_file') as f:
         log = f.readlines()
-
     calculate_avg_latency(log)
 
 
